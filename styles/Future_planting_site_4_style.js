@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_Planting_site2025_4 = function(feature, resolution){
+var style_Future_planting_site_4 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}

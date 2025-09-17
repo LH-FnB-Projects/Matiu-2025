@@ -4,12 +4,15 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-         maxZoom: 28, minZoom: 1
+         maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
+            code: 'EPSG:3857',
+            //extent: [19465653.615232, -5050924.767022, 19466116.663868, -5049963.312110],
+            units: 'm'})
     })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([19465456.758087, -5050964.361358, 19466563.952871, -5049912.306896], map.getSize());
+map.getView().fit([19465780.202715, -5050487.620897, 19466305.765615, -5049998.145337], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -523,13 +526,11 @@ document.addEventListener('DOMContentLoaded', function() {
         topLeftContainerDiv.appendChild(zoomControl);
     }
     //geolocate
-    var geolocateControl = document.getElementsByClassName('geolocate')[0];
-    if (geolocateControl) {
+    if (typeof geolocateControl !== 'undefined') {
         topLeftContainerDiv.appendChild(geolocateControl);
     }
     //measure
-    var measureControl = document.getElementsByClassName('measure-control')[0];
-    if (measureControl) {
+    if (typeof measureControl !== 'undefined') {
         topLeftContainerDiv.appendChild(measureControl);
     }
     //geocoder
