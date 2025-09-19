@@ -1,76 +1,44 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="css/leaflet.css">
-        <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
-        <link rel="stylesheet" href="css/qgis2web.css">
-        <link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/leaflet.photon.css">
-        <style>
-        #map {
-            width: 803px;
-            height: 748px;
-        }
-        </style>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
-<style>
-.page-title {
-  font-size: 24px;
-  font-family: 'Arial';
-  font-weight: bold;
-  margin: 20px 0;
-}
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
+    <link rel="stylesheet" href="css/qgis2web.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/leaflet.photon.css">
 
-.page-guide {
-  position: relative;       /* allows absolute positioning inside */
-  display: inline-block;    /* shrink-wrap to text width */
-  font-family: 'Arial';
-  font-size: 20px;
-  font-weight: bold;
-  text-align: left;
+    <style>
+      #map {
+        width: 803px;
+        height: 748px;
+      }
 
-}
+      .header-image {
+        display: block;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;  /* scales down on smaller screens */
+        height: auto;     /* preserves aspect ratio */
+      }
 
-.page-guide img {
-  position: absolute;
-  top: 50%;                 /* vertical center */
-  transform: translateY(-50%);
-  margin-left: 200px;         /* spacing from text */
-  height: 120px;             /* logo size independent of text */
-}
+    </style>
 
-  .page-instructions {
-    font-family: 'Arial';
-    font-size: 16px;
-    font-style: italic;   /* makes it italic */
-    margin-top: 8px;
-  }
+    <title>Matiu-Project_web</title>
+  </head>
 
-</style>
+ <body>
+    <!-- Top header image -->
+    <img src="Matiu-header.jpg"  class="header-image">
 
-<body>
-  <div class="page-title">Mātiu</div>
+    <!-- The map container -->
+    <div id="map"></div>
 
-  <p class="page-guide">
-    A Lower Hutt Forest &amp; Bird Restoration Project
-    <img src="FnB-logo.jpg" alt="Logo">
-  </p>
-
-  <div class="page-instructions">
-  Click on a coloured point to view image. Red points are recent planting.</div>
-</body>
-
-
-
-        <title>Matiu-Project_web</title>
-    </head>
-    <body>
-        <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
