@@ -12,36 +12,44 @@
         <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
         <link rel="stylesheet" href="./resources/qgis2web.css">
         <style>
-
-         #map {
-            width: 958px;
-            height: 748px;
+        html, body {
+            background-color: #ffffff;
         }
+        .ol-control > * {
+            background-color: #f8f8f8!important;
+            color: #444444!important;
+            border-radius: 0px;
+        }
+        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
+            color: #444444!important;
+        }
+        .search-layer-input-search {
+            background-color: #f8f8f8!important;
+        }
+        .ol-control > *:focus, .ol-control >*:hover {
+            background-color: rgba(248, 248, 248, 0.7)!important;
+        } 
+        .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 2px !important;
+        } 
+        </style>
 
-      .header-image {
-        display: block;
-        margin: 0;
-        padding: 0;
-        max-width: 100%;  /* scales down on smaller screens */
-        height: auto;     /* preserves aspect ratio */
-      }
-
-    </style>
-
-    <title>Waiu Wetland Project</title>
-  </head>
-
- <body>
-    <!-- Top header image -->
-    <img src="Matiu-header.jpg"  class="header-image">
-
-    <!-- The map container -->
-    <div id="map"></div>
-
-
-
+        <style>
+        #map {
+            width: 549px;
+            height: 790px;
+        }
+        </style>
+        <title>Matiu-Project_web</title>
+    </head>
+    <body>
+        <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
             </div>
-
+        </div>
         <script src="resources/qgis2web_expressions.js"></script>
 <script src="resources/proj4.js"></script>
         <script>proj4.defs('EPSG:3857','+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs');</script>
