@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:3857").setExtent([19465656.118614, -5050578.105723, 19466181.681514, -5049820.987688]);
+//ol.proj.get("EPSG:3857").setExtent([19465392.782063, -5051006.117699, 19466443.907863, -5049689.358557]);
 var wms_layers = [];
 
 var lyr_MatiuGEsatellite_0 = new ol.layer.Image({
